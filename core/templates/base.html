@@ -29,7 +29,7 @@
               <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'catalog:product_list' %}" id="download">Categorias <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
                 {% for category in categories %}
-                <li><a href="#">{{category}}</a></li>
+                <li><a href="{{ category.get_absolut_url }}">{{category}}</a></li>
                 {% endfor%}
               </ul>
             </li>
