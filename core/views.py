@@ -13,13 +13,13 @@ def index(request):
 
 
 def contact(request):
-	sucess = False
+	success = False
 	form = ContactForm(request.POST or None)
 	if form.is_valid():
 		form.send_mail()
-		sucess = True
+		success = True
 	context = {
 		'form': form,
-		'sucess': sucess
+		'success': success
 	}
 	return render(request, 'contact.html', context)
